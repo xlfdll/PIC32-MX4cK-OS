@@ -1,4 +1,4 @@
-#ifndef ASSERT_H
+#ifndef ASSERT_H    /* Guard against multiple inclusion */
 #define ASSERT_H
 
 /* Provide C++ Compatibility */

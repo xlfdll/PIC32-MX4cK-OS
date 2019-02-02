@@ -7,11 +7,19 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+/* Application-specific functions */
+#include "apptask.h"
+
 static void SetupMCU(void);
 
 int main(void)
 {
     SetupMCU();
+    
+    SetupHardware();
+    SetupFreeRTOS();
+    
+    vTaskStartScheduler();
 
     return 0;
 }
