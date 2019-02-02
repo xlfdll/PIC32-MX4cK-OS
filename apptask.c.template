@@ -1,6 +1,7 @@
 #include "apptask.h"
 
 // TODO: Task functions - Declarations
+// static void TestTask(void *pvParameters);
 
 void SetupHardware(void)
 {
@@ -30,11 +31,13 @@ void SetupFreeRTOS(void)
 //        /* Create the blinky software timer as described at the top of this
 //        file. */
 //        xTimer = xTimerCreate("Blinky", /* A text name, purely to help debugging. */
-//                              (mainBLINKY_TIMER_PERIOD), /* The timer period. */
+//                              (50 / portTICK_PERIOD_MS), /* The timer period. */
 //                              pdTRUE, /* This is an auto-reload timer, so xAutoReload is set to pdTRUE. */
 //                              (void *) 0, /* The ID is not used, so can be set to anything. */
 //                              prvBlinkyTimerCallback /* The callback function that inspects the status of all the other tasks. */
 //                              );
+//
+//        /* static void prvBlinkyTimerCallback( TimerHandle_t xTimer ); */
 //
 //        if (xTimer != NULL)
 //        {

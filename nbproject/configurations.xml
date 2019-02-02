@@ -32,6 +32,7 @@
       <itemPath>assert.h</itemPath>
       <itemPath>MX4cK.h</itemPath>
       <itemPath>apptask.h</itemPath>
+      <itemPath>hardware.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -63,6 +64,8 @@
       </logicalFolder>
       <itemPath>assert.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>hardware.c</itemPath>
+      <itemPath>apptask.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -131,7 +134,7 @@
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value="_SUPPRESS_PLIB_WARNING"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>

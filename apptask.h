@@ -5,13 +5,17 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
-/* FreeRTOS - Include more header files when needed*/
+
+    /* Hardware */
+#include "hardware.h"
+
+    /* FreeRTOS - Include more header files when needed*/
 #include "FreeRTOS.h"
 #include "task.h"
-    
-    void SetupHardware(void);
-    void SetupFreeRTOS(void);
+#include "timers.h"
+
+    void InitializeHardware(void);
+    void InitializeFreeRTOS(void);
 
     /* Provide C++ Compatibility */
 #ifdef __cplusplus

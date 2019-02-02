@@ -10,21 +10,21 @@
 /* Application-specific functions */
 #include "apptask.h"
 
-static void SetupMCU(void);
+static void InitializeMCU(void);
 
 int main(void)
 {
-    SetupMCU();
+    InitializeMCU();
     
-    SetupHardware();
-    SetupFreeRTOS();
+    InitializeHardware();
+    InitializeFreeRTOS();
     
     vTaskStartScheduler();
 
     return 0;
 }
 
-static void SetupMCU(void)
+static void InitializeMCU(void)
 {
     /* Configure the hardware for maximum performance. */
     vHardwareConfigurePerformance();
