@@ -10,6 +10,7 @@
             <itemPath>FreeRTOS/include/portable/PIC32MX/FreeRTOSConfig.h</itemPath>
             <itemPath>FreeRTOS/include/portable/PIC32MX/ISR_Support.h</itemPath>
             <itemPath>FreeRTOS/include/portable/PIC32MX/portmacro.h</itemPath>
+            <itemPath>FreeRTOS/include/portable/PIC32MX/ConfigPerformance.h</itemPath>
           </logicalFolder>
         </logicalFolder>
         <itemPath>FreeRTOS/include/FreeRTOS.h</itemPath>
@@ -29,6 +30,7 @@
         <itemPath>FreeRTOS/include/timers.h</itemPath>
       </logicalFolder>
       <itemPath>assert.h</itemPath>
+      <itemPath>MX4cK.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -45,7 +47,11 @@
           <logicalFolder name="f1" displayName="PIC32MX" projectFiles="true">
             <itemPath>FreeRTOS/portable/PIC32MX/port.c</itemPath>
             <itemPath>FreeRTOS/portable/PIC32MX/port_asm.S</itemPath>
+            <itemPath>FreeRTOS/portable/PIC32MX/ConfigPerformance.c</itemPath>
           </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="util" projectFiles="true">
+          <itemPath>FreeRTOS/util/printf-stdarg.c</itemPath>
         </logicalFolder>
         <itemPath>FreeRTOS/event_groups.c</itemPath>
         <itemPath>FreeRTOS/list.c</itemPath>
@@ -64,7 +70,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>FreeRTOS</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
