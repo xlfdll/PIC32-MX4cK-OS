@@ -1,2 +1,6 @@
-# MX4cK Platform
-FreeRTOS platform development for MX4cK board (based on Microchip PIC32 - PIC32MX460F512L)
+# PIC32 Platform
+FreeRTOS platform development for Microchip PIC32
+
+Currently supports:
+
+* MX4cK board (PIC32MX460F512L)
