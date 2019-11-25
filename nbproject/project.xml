@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>MX4cKPlatform</name>
+            <name>PIC32-MX4cK-OS</name>
             <creation-uuid>f3357575-aff3-4fea-b9b0-4c3a4a8597b4</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
