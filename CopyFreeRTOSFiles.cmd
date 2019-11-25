@@ -3,9 +3,12 @@
 IF EXIST %1\FreeRTOS (
     pushd FreeRTOS
     xcopy %1\FreeRTOS\Source\*.c . /y
+    del croutine.c /q
     
     pushd include
     xcopy %1\FreeRTOS\Source\include\*.* . /y
+    del deprecated_definitions.h /q
+    del croutine.h /q
     
     pushd portable\PIC32MX
     xcopy %1\FreeRTOS\Source\portable\MPLAB\PIC32MX\*.h . /y
