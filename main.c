@@ -1,4 +1,5 @@
-#include "PIC32-MX4cK-Config.h"
+/* Hardware Configuration Bits */
+#include "config_bits.h"
 
 /* Hardware specific functions */
 #include "ConfigPerformance.h"

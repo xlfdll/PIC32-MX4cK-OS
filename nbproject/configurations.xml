@@ -34,7 +34,7 @@
       <itemPath>assert.h</itemPath>
       <itemPath>apptask.h</itemPath>
       <itemPath>hardware.h</itemPath>
-      <itemPath>PIC32-MX4cK-Config.h</itemPath>
+      <itemPath>config_bits.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

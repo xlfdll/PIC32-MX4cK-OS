@@ -1,5 +1,5 @@
-#ifndef MX4CK_H    /* Guard against multiple inclusion */
-#define MX4CK_H
+#ifndef CONFIG_BITS_H    /* Guard against multiple inclusion */
+#define CONFIG_BITS_H
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
@@ -51,4 +51,4 @@ extern "C" {
 }
 #endif
 
-#endif /* MX4CK_H */
+#endif /* CONFIG_BITS_H */
