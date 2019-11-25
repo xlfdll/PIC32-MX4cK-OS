@@ -1,6 +1,6 @@
 /*
- * FreeRTOS Kernel V10.1.1
- * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ * FreeRTOS Kernel V10.2.1
+ * Copyright (C) 2019 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -31,6 +31,18 @@
 
 #ifndef PORTABLE_H
 #define PORTABLE_H
+
+/* Each FreeRTOS port has a unique portmacro.h header file.  Originally a
+pre-processor definition was used to ensure the pre-processor found the correct
+portmacro.h file for the port being used.  That scheme was deprecated in favour
+of setting the compiler's include path such that it found the correct
+portmacro.h file - removing the need for the constant and allowing the
+portmacro.h file to be located anywhere in relation to the port being used.
+Purely for reasons of backward compatibility the old method is still valid, but
+to make it clear that new projects should not use it, support for the port
+specific constants has been moved into the deprecated_definitions.h header
+file. */
+#include "deprecated_definitions.h"
 
 /* If portENTER_CRITICAL is not defined then including deprecated_definitions.h
 did not result in a portmacro.h header file being included - and it should be
@@ -72,6 +84,14 @@ must be set in the compiler's include path. */
 	#define portNUM_CONFIGURABLE_REGIONS 1
 #endif
 
+#ifndef portHAS_STACK_OVERFLOW_CHECKING
+	#define portHAS_STACK_OVERFLOW_CHECKING 0
+#endif
+
+#ifndef portARCH_NAME
+	#define portARCH_NAME NULL
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -85,9 +105,17 @@ extern "C" {
  *
  */
 #if( portUSING_MPU_WRAPPERS == 1 )
-	StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) PRIVILEGED_FUNCTION;
+	#if( portHAS_STACK_OVERFLOW_CHECKING == 1 )
+		StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, StackType_t *pxEndOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) PRIVILEGED_FUNCTION;
+	#else
+		StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) PRIVILEGED_FUNCTION;
+	#endif
 #else
-	StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters ) PRIVILEGED_FUNCTION;
+	#if( portHAS_STACK_OVERFLOW_CHECKING == 1 )
+		StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, StackType_t *pxEndOfStack, TaskFunction_t pxCode, void *pvParameters ) PRIVILEGED_FUNCTION;
+	#else
+		StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters ) PRIVILEGED_FUNCTION;
+	#endif
 #endif
 
 /* Used by heap_5.c. */
