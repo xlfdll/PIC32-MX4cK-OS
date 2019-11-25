@@ -32,9 +32,9 @@
         <itemPath>FreeRTOS/include/deprecated_definitions.h</itemPath>
       </logicalFolder>
       <itemPath>assert.h</itemPath>
-      <itemPath>MX4cK.h</itemPath>
       <itemPath>apptask.h</itemPath>
       <itemPath>hardware.h</itemPath>
+      <itemPath>PIC32-MX4cK-Config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -63,12 +63,12 @@
         <itemPath>FreeRTOS/stream_buffer.c</itemPath>
         <itemPath>FreeRTOS/tasks.c</itemPath>
         <itemPath>FreeRTOS/timers.c</itemPath>
+        <itemPath>FreeRTOS/croutine.c</itemPath>
       </logicalFolder>
       <itemPath>assert.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>hardware.c</itemPath>
       <itemPath>apptask.c</itemPath>
-      <itemPath>FreeRTOS/croutine.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

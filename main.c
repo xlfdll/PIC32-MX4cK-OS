@@ -1,4 +1,4 @@
-#include "MX4cK.h"
+#include "PIC32-MX4cK-Config.h"
 
 /* Hardware specific functions */
 #include "ConfigPerformance.h"
