@@ -28,6 +28,8 @@
         <itemPath>FreeRTOS/include/stream_buffer.h</itemPath>
         <itemPath>FreeRTOS/include/task.h</itemPath>
         <itemPath>FreeRTOS/include/timers.h</itemPath>
+        <itemPath>FreeRTOS/include/croutine.h</itemPath>
+        <itemPath>FreeRTOS/include/deprecated_definitions.h</itemPath>
       </logicalFolder>
       <itemPath>assert.h</itemPath>
       <itemPath>MX4cK.h</itemPath>
@@ -66,6 +68,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>hardware.c</itemPath>
       <itemPath>apptask.c</itemPath>
+      <itemPath>FreeRTOS/croutine.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
